@@ -1,4 +1,10 @@
-def add_book():
-    book_name=input("Enter book name:").upper()
-    books.append(book_name)
-    print(f"Book{book_name}added.")
+from utils import books
+
+def add():
+    name = input("Enter book name: ").upper()
+
+    if name in books:
+        print("Book already exists")
+    else:
+        books[name] = "AVAILABLE"
+        print("Book added")
